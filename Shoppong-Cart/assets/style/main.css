@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "vazir";
+  direction: rtl;
+}
+
+body {
+  width: 100%;
+  background-color: #eeeeee;
+  position: relative;
+}
+
+.cart-section {
+  width: 80%;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px solid royalblue;
+  -webkit-box-shadow: 0 10px 10px rgba(65, 105, 225, 0.151);
+          box-shadow: 0 10px 10px rgba(65, 105, 225, 0.151);
+  border-radius: 6px;
+  position: absolute;
+  top: 3rem;
+  right: 10%;
+}
+
+button {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  background-color: royalblue;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 4px;
+  -webkit-transition: background 0.3s ease,-webkit-transform 0.07s ease-in;
+  transition: background 0.3s ease,-webkit-transform 0.07s ease-in;
+  transition: transform 0.07s ease-in,background 0.3s ease;
+  transition: transform 0.07s ease-in,background 0.3s ease,-webkit-transform 0.07s ease-in;
+}
+
+button:hover {
+  background-color: #1246e4;
+}
+
+button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.product-list {
+  list-style: none;
+  position: relative;
+  top: 250px;
+  margin-bottom: 3rem;
+}
+
+.product-item {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 50rem;
+  max-width: 90%;
+  border: 2px solid royalblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 6px;
+}
+
+.product-item img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 10rem;
+}
+
+.product-item button {
+  margin: 1rem 0;
+}
+/*# sourceMappingURL=main.css.map */

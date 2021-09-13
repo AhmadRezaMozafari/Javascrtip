@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.visible{
+    display: block;
+}
+.modal{
+    position: fixed;
+    top: 30vh;
+    left: 22%;
+    width: 60%;
+}
+.card{
+    background-color: white;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35) ;
+    border-radius: 10px;
+}
+.btn{
+    padding:0.7rem 1rem;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    font-size: 100%;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.35);
+}
+header{
+    width: auto;
+    height: 60px;
+    background-color: royalblue;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items:center;
+    position: relative;
+    
+    h2{
+        padding-left: 20px;
+        text-transform: uppercase;
+        
+    }
+    button{
+        margin-right: 20px;
+        background-color: rgb(241, 137, 0);
+        color: white;
+        box-shadow: none;
+        &:hover{
+            background-color: rgb(255, 217, 0);
+            color: #000;
+        }
+    }
+}
+
+#backdrop{
+    display: none;
+}
+
+#backdrop.visible{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: block;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+}
+
+#add-modal{
+    display: none;
+}
+#add-modal.visible{
+    display: block;
+    position: absolute;
+    top: 25%;
+    flex-direction: column;
+    z-index: 20;
+    animation: fade-out-in 0.5s ease-out forwards;
+}
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    label{
+        padding: 1rem 0 0.5rem 1rem;
+        font-weight: bold;
+    }
+    input{
+        padding: 12px;
+        margin-left: 1.5rem;
+        width: 95%;
+        border: 1px solid rgb(189, 189, 189);
+        border-radius: 3px;
+        outline: none;
+        font-size: 100%;
+        // box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.35);
+
+        &:focus{
+            background-color:rgba(65, 105, 225, 0.048);
+        }
+    }
+
+}
+
+.btn-action{
+    display: flex;
+    justify-content: flex-end;
+    margin: 3rem 1rem;
+    #confirm-add-btn{
+        margin-right: 1rem;
+        background-color: green;
+        color: #fff;
+        &:hover{
+            background-color: rgb(0, 182, 0);
+        }
+    }
+    .cancelBtn{
+        background-color: rgb(170, 0, 0);
+        color: #fff;
+        &:hover{
+            background-color: red;
+        }
+    }
+}
+
+#delete-modal{
+    display: none;
+}
+
+#delete-modal.visible{
+    display: block;
+    @extend .btn-action;
+    justify-content: space-evenly;
+    z-index: 10;
+    #confirm-delete-btn{
+        @extend #confirm-add-btn;
+    }
+
+    h2{
+        padding-top: 1rem;
+    }
+    
+}
+
+main{
+    #entery-text{
+        position: relative;
+        width: 50%;
+        height: 15vh;
+        top: 35vh;
+        left: 25%;
+        align-items: center;
+        justify-content: center;
+        p{
+            padding-top: 2.5rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    #movie-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        .item-holder{
+            border-radius: 6px;
+            width: 40%;
+            height: 20vh;
+            display: flex;
+            box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.35);
+            margin-top: 3rem;
+            background-color: #fafafa;
+            .img-holder{
+                img{
+                    background-position: top left;
+                    background-size: cover;
+                    width: 70%;
+                }
+            }
+            .info{
+                p{
+                    padding: 1rem;
+                }
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+@keyframes fade-out-in{
+    from{
+        transform: translateY(-5rem);
+    }
+    to{
+        transform: translateY(0rem);
+    }
+}

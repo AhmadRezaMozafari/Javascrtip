@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Movies</title>
+    <link rel="stylesheet" href="Style/main.css">
+    <script src="JS/app.js" defer></script>
+</head>
+<body>
+    
+    <header>
+        <h2>Favorite Movies</h2>
+        <button type="button" id="add-movie-btn" class="btn">Add movie</button>
+    </header>
+
+
+    <section>
+
+        <div id="backdrop"></div>
+        
+        <div class="modal card" id="add-modal">
+            <div class="modal-content">
+                <label for="title">Movie Title:</label>
+                <input type="text" name="title" id="title">
+                <label for="image-url">Image URL:</label>
+                <input type="text" name="image-url" id="image-url">
+                <label for="rate">Rate:</label>
+                <input type="number" id="rate" name="rate" min="1" max="5">
+            </div>
+            <div class="btn-action">
+                <button type="button" id="confirm-add-btn" class="btn">Confirm</button>
+                <button type="button" id="cancel-btn" class="btn cancelBtn">Cancel</button>
+            </div>
+        </div>
+        <div id="delete-modal" class="card modal">
+            <h2>Are You Sure You Want Delete This Item?</h2>
+            <div class="btn-action">
+                <button type="button" id="confirm-delete-btn" class="btn">Confirm</button>
+                <button type="button" id="canc-btn" class="btn cancelBtn" >Cancel</button>
+            </div>
+        </div>
+    </section>
+
+
+    <main>
+        <section id="entery-text" class="card">
+            <p>there is nothing !!!</p>
+        </section>
+        <ul id="movie-list">
+
+        </ul>
+    </main>
+
+</body>
+</html>
+
+<!-- 
+                <div class="item-holder">
+                <div class="img-holder"><img src="/Icons/social media-icon/gmail5.png" alt=""></div>
+                <div class="info">
+                    <p>name</p>
+                    <p>rate</p>
+                </div>
+            </div>
+ -->

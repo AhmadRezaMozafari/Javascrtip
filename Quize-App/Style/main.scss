@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    font-family: 'Vazir';
+    font-size: 100%;
+}
+
+$hoverCO:rgb(250, 232, 192);
+$hoverC:rgb(150, 224, 248);
+$btnsC:rgb(228, 248, 255);
+$btnsBC:rgb(134, 163, 173);
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 162, 216);
+
+}
+
+.hide{
+    display: none !important;
+}
+
+.correct{
+    background-color: rgb(0, 182, 0) !important;
+    color: #ffffff;
+    border-color: transparent !important;
+};
+
+.wrong{
+    color: #ffffff;
+    background-color: rgb(204, 24, 24) !important;
+    border-color: transparent !important;
+
+}
+.container{
+    width: 40%;
+    position: relative;
+    top: 20%;
+    right: 30%;
+    background-color: #ffffff;
+    padding: 0.5rem;
+    border: 1px solid rgb(90, 90, 90);
+    border-radius: 4px;
+}
+
+#question{
+    font-weight: bold;
+    font-size: 130%;
+    padding: 1rem;
+    color: #000;
+}
+.btn-grid{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.btn{
+    text-align: right;
+    padding: 9px ;
+    margin-top: 9px;
+    background-color: $btnsC;
+    outline: none;
+    border: 1px solid $btnsBC;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover{
+        background-color: $hoverCO;
+        border-color:transparent; 
+    }
+}
+
+#next-btn{
+    margin-top: 3rem;
+    width: 20%;
+    text-align: center;
+    font-size: 110%;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    position: relative;
+    left: 38%;
+    &:hover{
+        background-color: royalblue;
+        color: #ffffff;
+    }
+}
+
+#game-role-section{
+    .game-role{
+        font-size: 130%;
+        margin:1rem 0 2rem 0;
+    }
+    p{
+        margin-top: 6px;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #start-btn{
+        @extend #next-btn;         
+        margin-top: 2rem;
+        left: 0 !important;
+        &:hover{
+            background-color: rgb(255, 47, 47) !important;
+        }
+    }
+
+}
+
+
+@media(max-width:768px){
+    .container {
+        width: 56% !important;
+        top: 25% !important;
+        right: 22% !important;
+    }
+
+
+
+}
+
+@media(max-width:425px){
+    *{
+        font-size: 96%;
+    }
+    .container{
+        width: 65% !important;
+        right: 15% !important;
+    }
+    #next-btn, #game-role-section #start-btn {
+        margin-top: 0 !important;
+        width: 20%;
+        text-align: center;
+        font-size: 100%;
+        font-weight: bold;
+        border-radius: 6px;
+        letter-spacing: 0px;
+        left: 38%;
+    }
+    #question{
+        font-size: 110%;
+    }
+    
+}
+
+@media(max-width:375px){
+    .container {
+        top: 20% !important;
+        width: 70% !important;
+    }
+    #question{
+        font-size: 100%;
+    }
+}
+
+@media(max-width:320px){
+    * {
+        font-size: 94%;
+    }
+    #game-role-section .game-role {
+        font-size: 130%;
+        margin: 1rem 0 1rem 0;
+    }
+    #start-btn{
+        
+        padding: 9px 5px !important;
+
+    }
+}

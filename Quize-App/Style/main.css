@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  direction: rtl;
+  font-family: 'Vazir';
+  font-size: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #00a2d8;
+}
+
+.hide {
+  display: none !important;
+}
+
+.correct {
+  background-color: #00b600 !important;
+  color: #ffffff;
+  border-color: transparent !important;
+}
+
+.wrong {
+  color: #ffffff;
+  background-color: #cc1818 !important;
+  border-color: transparent !important;
+}
+
+.container {
+  width: 40%;
+  position: relative;
+  top: 20%;
+  right: 30%;
+  background-color: #ffffff;
+  padding: 0.5rem;
+  border: 1px solid #5a5a5a;
+  border-radius: 4px;
+}
+
+#question {
+  font-weight: bold;
+  font-size: 130%;
+  padding: 1rem;
+  color: #000;
+}
+
+.btn-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  text-align: right;
+  padding: 9px;
+  margin-top: 9px;
+  background-color: #e4f8ff;
+  outline: none;
+  border: 1px solid #86a3ad;
+  border-radius: 12px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #fae8c0;
+  border-color: transparent;
+}
+
+#next-btn, #game-role-section #start-btn {
+  margin-top: 3rem;
+  width: 20%;
+  text-align: center;
+  font-size: 110%;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  position: relative;
+  left: 38%;
+}
+
+#next-btn:hover, #game-role-section #start-btn:hover {
+  background-color: royalblue;
+  color: #ffffff;
+}
+
+#game-role-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#game-role-section .game-role {
+  font-size: 130%;
+  margin: 1rem 0 2rem 0;
+}
+
+#game-role-section p {
+  margin-top: 6px;
+}
+
+#game-role-section #start-btn {
+  margin-top: 2rem;
+  left: 0 !important;
+}
+
+#game-role-section #start-btn:hover {
+  background-color: #ff2f2f !important;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 56% !important;
+    top: 25% !important;
+    right: 22% !important;
+  }
+}
+
+@media (max-width: 425px) {
+  * {
+    font-size: 96%;
+  }
+  .container {
+    width: 65% !important;
+    right: 15% !important;
+  }
+  #next-btn, #game-role-section #start-btn, #game-role-section #start-btn {
+    margin-top: 0 !important;
+    width: 20%;
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
+    border-radius: 6px;
+    letter-spacing: 0px;
+    left: 38%;
+  }
+  #question {
+    font-size: 110%;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    top: 20% !important;
+    width: 70% !important;
+  }
+  #question {
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  * {
+    font-size: 94%;
+  }
+  #game-role-section .game-role {
+    font-size: 130%;
+    margin: 1rem 0 1rem 0;
+  }
+  #start-btn {
+    padding: 9px 5px !important;
+  }
+}
+/*# sourceMappingURL=main.css.map */
